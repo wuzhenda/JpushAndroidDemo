@@ -290,7 +290,7 @@ public class TagAliasOperatorHelper {
         if(jPushMessage.getErrorCode() == 0){
             Logger.i(TAG,"action - modify alias Success,sequence:"+sequence);
             setActionCache.remove(sequence);
-            String logs = getActionStr(tagAliasBean.action)+" alias success";
+            String logs = getActionStr(tagAliasBean.action)+" "+jPushMessage.getAlias()+" alias success";
             Logger.i(TAG,logs);
             ExampleUtil.showToast(logs, context);
         }else{
